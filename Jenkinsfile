@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Deploy Prometheus') {
             steps {
-                sh 'sudo ansible-playbook prometheus.yml -i inventory/hosts'
+                sh 'ansible-playbook prometheus.yml -i inventory/hosts'
             }
         }
     }
